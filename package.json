@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/aohanlon541/LIRI#readme",
   "dependencies": {
+    "node-spotify-api": "^1.0.5",
     "spotify-web-api-node": "^2.4.0"
   }
 }
