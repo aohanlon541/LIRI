@@ -93,5 +93,5 @@ request(queryUrl, function(error, response, body){
 }
 
 function doWhatItSays() {
-    fs.writeFile("")
+    fs.writeFile("random.txt", "I Want it That Way,")
 }
