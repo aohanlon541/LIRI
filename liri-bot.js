@@ -43,7 +43,7 @@ client.get('statuses/user_timeline', {
 });
 }
 
-function getSong() {
+function getSong(searchTerm) {
 var Spotify = require('node-spotify-api');
 
 var spotify = new Spotify({
@@ -93,5 +93,10 @@ request(queryUrl, function(error, response, body){
 }
 
 function doWhatItSays() {
-    fs.writeFile("random.txt", "I Want it That Way,")
+    fs.readFile('random.txt', 'utf8', function (err,data) {
+        if (err) {
+            return console.log(err);
+        }
+       getSong(data);
+    });
 }
